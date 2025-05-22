@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 - Full Body Strength</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .hamburger {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .hamburger div {
+            background-color: #fff;
+            height: 4px;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        nav {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            height: 100%;
+            width: 200px;
+            background-color: #1f1f1f;
+            padding-top: 60px;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+        nav a {
+            display: block;
+            color: #ffcc00;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #333;
+        }
+        nav.open {
+            left: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 60px;
+        }
+        ul {
+            background: #1f1f1f;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+            margin-top: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="navMenu">
+        <a href="day1.html">Day 1</a>
+        <a href="day2.html">Day 2</a>
+        <a href="day3.html">Day 3</a>
+        <a href="day4.html">Day 4</a>
+        <a href="day5.html">Day 5</a>
+        <a href="day6.html">Day 6</a>
+        <a href="day7.html">Day 7</a>
+    </nav>
+    <div class="container">
+        <h1>Day 1 - Full Body Strength</h1>
+        <ul>
+            <li>Push-ups – 3 sets x 15 reps</li><li>Bodyweight Squats – 3 sets x 20 reps</li><li>Plank – 3 sets x 30 seconds</li><li>Glute Bridges – 3 sets x 15 reps</li><li>Mountain Climbers – 3 sets x 20 reps</li>
+        </ul>
+    </div>
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById('navMenu');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
